@@ -1,4 +1,5 @@
 # LMS_DEMO.
+<<<<<<< HEAD
 **This project is kind of Book Management System project is maintaining the book's stock and availability for the students, other type of user.
 project developed with django , python and delivering the APIs, having some test cases, as per the requirements .
 for getting repository [ click here](https://github.com/nakushwah/nakushwah.git). for this project using sqlite3 database** 
@@ -127,3 +128,9 @@ _For Running the TestCases run the command in `./manage.py test <file_path>` (us
 
 
     
+=======
+remaining and to do:- write test cases for authorized  API 
+2.) auto logout , 
+
+:slightly_smiling_face:
+>>>>>>> origin/master
