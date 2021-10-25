@@ -1,3 +1,9 @@
+"""
+Creating User(User1) model by inheriting AbstractUser
+customized django's User model added some new extra fields
+"""
+
+
 from django.db import models
 import uuid
 from django.utils.timezone import now

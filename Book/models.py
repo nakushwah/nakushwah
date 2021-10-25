@@ -1,3 +1,8 @@
+""" creating model for storing book's data ,
+    used uuid for creating unique id for each object of book table ,
+    and for creating author and student choices used user1 model filter by user_roles
+"""
+
 import uuid
 from django.db import models
 from UserAuth.models import User1
@@ -25,3 +30,5 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
+
+

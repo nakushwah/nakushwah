@@ -3,6 +3,10 @@ from .models import Book
 
 
 class BookSerializer(serializers.ModelSerializer):
+    """
+    Serializing all the fields of book for doing CRUD operations
+    """
+
     class Meta:
         model = Book
         fields = "__all__"
