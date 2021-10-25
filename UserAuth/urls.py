@@ -10,7 +10,7 @@ urlpatterns = [
     # Auth APIs
     path('loginView/', LogInView.as_view(), name='LogIn'),
     path('LogoutView/', LogoutView.as_view(), name='Logout'),
-    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    # path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path("RegisterView/", RegisterView.as_view(), name="RegisterView"),
 
 ]

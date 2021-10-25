@@ -20,7 +20,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User1
         fields = ('email', 'username', 'password', 'first_name', 'last_name', 'city',
-                  'contact', 'Address', 'city', 'education')
+                  'contact', 'Address', 'city', 'education', "user_roles", "id")
         read_only_fields = ["updated_date", "created_date", "id", "is_superuser",
                             "is_staff", "is_active"]
         extra_kwargs = {
@@ -71,6 +71,7 @@ class LogInSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
         token = super(LogInSerializer, cls).get_token(user)
+
         token['username'] = user.username
         token['password'] = user.password
         return token
