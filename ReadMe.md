@@ -1,5 +1,4 @@
 # LMS_DEMO.
-<<<<<<< HEAD
 **This project is kind of Book Management System project is maintaining the book's stock and availability for the students, other type of user.
 project developed with django , python and delivering the APIs, having some test cases, as per the requirements .
 for getting repository [ click here](https://github.com/nakushwah/nakushwah.git). for this project using sqlite3 database** 
@@ -16,7 +15,7 @@ for getting repository [ click here](https://github.com/nakushwah/nakushwah.git)
     2. get in the directory and open the terminal or command prompt with that path find the `manage.py`file and `requirements.txt` file 
     3. install all the requirements using `pip3 install -r requirements.txt` this command.
     4. make sure all migrations `python3 manage.py makemigrations` and then migrate `python3 manage.py migrate` it.
-    5. for running the whole project use `python3 manage.py runserver` once server run successful congrats project setup done :slightly_smiling_face
+    5. for running the whole project use `python3 manage.py runserver` once server run successful congrats project setup done 🙂
   
 
 _Project having  two APPS (Book, UserAuth) , one main project's directory (LMS), each app having its test cases for testing the serializers and APIS_
@@ -74,7 +73,8 @@ _For Running the TestCases run the command in `./manage.py test <file_path>` (us
     "password": password,
     "password2": confirm password,
     ```
-  6 **POST** `api/LogoutView/` 
+    
+  6. **POST** `api/LogoutView/` 
     
     * 
       ```
@@ -121,16 +121,3 @@ _For Running the TestCases run the command in `./manage.py test <file_path>` (us
 1. AUTO LogOUT
 2. Authorized Test Cases
 3. email verification 
-
-  
-    
-
-
-
-    
-=======
-remaining and to do:- write test cases for authorized  API 
-2.) auto logout , 
-
-:slightly_smiling_face:
->>>>>>> origin/master
