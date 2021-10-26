@@ -110,6 +110,7 @@ _For Running the TestCases run the command in `./manage.py test <file_path>` (us
           }
         ```
   9. **GET , PUT , DELETE**  `edit_books/<pk>/` _pk=id_ payload will be same as point viii.
+  10 **GET ,POST**   `VerifyEmail/<token>/` email verification  API 
 
 
 ###### run the test file:

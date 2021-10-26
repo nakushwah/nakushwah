@@ -1,0 +1,13 @@
+version : "3"
+
+services:
+  web:
+    build:
+      context: .
+    restart: on-failure
+    command: python manage.py runserver 0.0.0.0:8000
+    environment:
+      - EMAIL_HOST_USER=lmsdemobestpeers@gmail.com
+      - EMAIL_HOST_PASSWORD=one23four
+    ports:
+      - "8000:8000"

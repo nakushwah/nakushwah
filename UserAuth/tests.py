@@ -4,13 +4,11 @@ from django.urls import reverse
 from .models import User1
 from .serializers import UserSerializer
 from django.test import TestCase
-from rest_framework.test import APIClient
-from .serializers import LogInSerializer
+from rest_framework.test import APIClient, APITestCase
 
 # initialize the APIClient app
 client = APIClient()
 
-token = LogInSerializer()
 
 
 class TestLogIn(TestCase):
@@ -50,37 +48,28 @@ class TestLogIn(TestCase):
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
 
 
-class TestGetUser1(TestCase):
+class TestGetUser1(APITestCase):
     """ Test class for User1 Model"""
 
     def setUp(self):
         """ module for defining values for next test """
-        self.obj1 = User1.objects.create(
-            username="NDK1234",
-            first_name="kumar21",
-            last_name="ndk22",
-            email="kumar12443@gmail.com",
-            date_joined="2021-10-22T21:13:00Z",
-            user_roles="Author",
-            contact=2134567890,
-            Address="dfdfs",
-            city="sdfdsf",
-            education="fsdf",
-            is_verified=True,
-            password="on23456789",
-            created_date="2021-10-22T13:43:05.257864Z",
-            updated_date="2021-10-22T13:43:05.257878Z",
-
+        self.crete_user = User1.objects.create_user(
+            username="kumar",
+            first_name="kumar",
+            last_name="last_name",
+            email="email@gmail.com",
+            password="one234"
         )
+        self.first_payload = {
+            "username": "kumar",
+            "password": "one234"
 
-    def test_single_get(self):
-        """ Test module for getting single User by id"""
-        response = client.get(
-            reverse('UpdateUser', kwargs={'pk': self.obj1.id}))
-        user = User1.objects.get(id=self.obj1.id)
-        serializer = UserSerializer(user)
-        self.assertEqual(response.data, serializer.data)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        }
+        self.user = client.post(
+            reverse('LogIn'),
+            data=json.dumps(self.first_payload),
+            content_type="Application/json")
+
 
     def test_get_User1s(self):
         """
