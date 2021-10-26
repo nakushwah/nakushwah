@@ -121,4 +121,3 @@ _For Running the TestCases run the command in `./manage.py test <file_path>` (us
 **TO DO** :- 
 1. AUTO LogOUT
 2. Authorized Test Cases
-3. email verification 
